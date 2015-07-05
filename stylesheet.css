@@ -1,0 +1,148 @@
+/*הגדרות כלליות*/
+* {
+	margin:0px;
+	padding:0px;
+	font:Arial, Helvetica, sans-serif;
+}
+body {   
+	overflow-x: hidden;
+	max-height:800px;
+	background-color:#D8BA97;
+}
+#wrapper {
+	position: relative;
+	width:100%;
+	margin: 0 auto;
+	border:solid 2px #ffffff;
+} 
+ul{
+	list-style-type: none;
+}
+li:hover {
+	cursor: pointer;
+}
+
+/*מפה מתחילות הגדרות של האלמנטים במפה*/
+#map {
+	/* הגדרות של המפה*/
+	width:100%; 
+	height:800px; /* 758 for tablet */
+	border:solid 2px #ffffff; 
+	position:relative;
+	margin:0 auto;
+	border:none;
+}
+#storybox {
+    /* החלון של הסיפור */
+	background: #C5715A;
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:30%;
+	height:790px; /*748 for tablet*/
+	overflow-y:scroll;
+	padding:5px;
+}
+#storybox h2 {
+    /* כותרת לחלון של הסיפור */
+    padding:0px 10px 0px 10px;
+   	font-family: 'Montserrat', sans-serif;
+   	color: #6D412A;
+   	text-shadow: 2px 2px 0px #FF9979;
+    font-size: 45px;
+	font-weight: bold;
+	text-align:center;
+}
+#storybox h2::first-letter { 
+text-transform: uppercase;
+}
+#storybox h3{
+	 /* כותרת משנית לחלון של הסיפור */
+   	font-family: 'Montserrat', sans-serif;
+   	color: #6D412A;
+   	text-shadow: 2px 2px 0px #FF9979;
+    font-size: 20px;
+	font-weight: bold;
+	text-align:center;
+}
+#storybox h4{ 
+	padding: 0px 80px;
+	text-align: center;
+	/*font-family: arial;*/
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+	color: #6D412A;
+	text-shadow: 2px 2px 0px #FF9979;
+}
+.charText{
+	padding: 0px 80px;
+	font: 0.8em Verdana, Geneva, sans-serif;
+	font-weight: 300;
+	color: #2F2213;
+	line-height: 1.3em;
+	margin-bottom: 2em;
+	word-spacing: 0.2em;
+}
+#storybox img {
+    /*התמונה של הסיפור*/
+  	display: block;
+	margin: 35px auto;
+} 
+.paraText {
+    /* התוכן של הסיפור */
+    text-align:left;
+    padding: 0px 40px;
+    margin-top:20px;
+    margin-bottom:20px;
+	font: 1em Verdana, Geneva, sans-serif;
+	font-weight: 150;
+	color: #2F2213;
+	line-height: 1.8em;
+	margin-bottom: 2em;
+	word-spacing: 0.2em;
+}
+#storybox button {
+    /* כפתור סגור של הסיפור */
+	display:block;
+	position:fixed;
+	top:10px;
+	right:28.5%;
+	width:24px;
+	height:24px;
+	background-image:url(../the_begining/img/close.png);
+	background-repeat: no-repeat;
+	border-color:#C5715A;
+}
+#times {
+    /* החלון של הטיימלין */
+	height:130px;
+	position:fixed;
+	bottom:5%;
+	width: 954px;
+	left: 50%;
+	margin: 0 0 0 -33.45%;
+	z-index:2;
+}
+#uptimes {
+	position:relative;
+	height:30px;
+}
+#slider{
+	position:relative;
+}
+#slider span{
+	background-size:40px;
+	background-image:url(../the_begining/img/finger.png);
+}
+#uptimes img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:30px;
+	height:30px;
+}
+#downtimes {
+	height:100px;
+	background-size: 954px 100px;
+	background-image: url(../the_begining/img/timeback.png);
+}

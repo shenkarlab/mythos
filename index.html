@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Mapbox final project, Made by Maoz, Lital and Lior</title>
+	<link href='stylesheet.css' rel='stylesheet' />
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+	<link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+	
+</head>
+
+<body>
+	<div id="wrapper">
+		<section id="storybox"> </section>
+		<div id="times">
+			<section id="uptimes">
+    			<div id="slider"> </div>
+			</section>
+			<section id="downtimes"> </section>
+		</div>
+		<div id='map'>
+			<script src='map.js'> </script>
+		</div>	
+	</div>
+	<script>
+		$( "#slider" ).slider({			
+			change: function( event, ui ) {		  	
+		  		var value = $( "#slider" ).slider( "option", "value" );
+		  		value = Math.floor(value/8);	  	
+		  		changeColor("index.html?group="+ value); // 11 levels! + 1 spare at the edge
+		  	}
+		});
+	//	$( "#slider" ).slider( "option", "value", getParameterByName("group") );
+	</script>
+</body>
+</html>
