@@ -350,7 +350,7 @@ var geoJson = [
 	"g":"1",
     "properties": {
 		"icon": {
-            "iconUrl": "img/Fire.png",
+            "iconUrl": "img/fire.png",
             "iconSize": [40, 70], // size of the icon
             "iconAnchor": [20, 60], // point of the icon which will correspond to marker's location
             "popupAnchor": [0,0], // point from which the popup should open relative to the iconAnchor
@@ -592,17 +592,16 @@ myLayer.on('click', function(e) {
 	var the_id = feature.id;
 	var xmlhttp = new XMLHttpRequest();
 	var url = "events.json";
+	xmlhttp.open("GET", url, true);
 	xmlhttp.onreadystatechange=function() {
     	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
     		var arr = JSON.parse(xmlhttp.responseText);
-   			var i;
-    		var out = "";
-    		for(i = 0; i < arr.length; i++) {
-    			
-    			if(arr[i].id == the_id){
-    				 document.getElementById("storybox").style.zIndex = "3";
-    				 document.getElementById("times").style.left = "500px";
-    				 document.getElementById("storybox").innerHTML = "<img src="+ arr[i].img+ ">"
+    	}
+    	for(i = 0; i < arr.length; i++) {	
+    		if(arr[i].id == the_id){
+    			document.getElementById("storybox").style.zIndex = "3";
+    			document.getElementById("times").style.left = "500px";
+    		    document.getElementById("storybox").innerHTML = "<img src="+ arr[i].img+ ">"
     				  +"<h2>"+ arr[i].name + "</h2><br>"
 					  +"<h3>"+ arr[i].koteret3 + "</h3>"
     				  +"<p class=\"paraText\">" + arr[i].description + "</p><br>"		  
@@ -611,10 +610,8 @@ myLayer.on('click', function(e) {
     				  +"<p class=\"charText\">" + arr[i].chara + "</p><br>"
     				  +"<button onclick=\"close_button()\">"  + "</button>";	  
 				}
-    		}	
-    	}
-	}
-	xmlhttp.open("GET", url, true);
+    	}	
+    }
 	xmlhttp.send();
 });
 
